@@ -36,7 +36,6 @@ def acceptConnections():
 def setup():
     print("\n\t\t\t\t\t\tIP MESSENGER\n")
 
-    # Getting global values
     global PORT
     global IP_ADDRESS
     global SERVER
