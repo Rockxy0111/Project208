@@ -10,10 +10,7 @@ BUFFER_SIZE = 4096
 clients = {}
 
 
-is_dir_exists = os.path.isdir('shared_files')
-print(is_dir_exists)
-if(not is_dir_exists):
-    os.makedirs('shared_files')
+
 
     
 
@@ -27,14 +24,11 @@ def acceptConnections():
         clients[client_name] = {
                 "client"         : client,
                 "address"        : addr,
-                "connected_with" : "",
-                "file_name"      : "",
-                "file_size"      : 4096
             }
 
         print(f"Connection established with {client_name} : {addr}")
 
-        thread = Thread(target = handleClient, args=(client,client_name,))
+        thread = Thread(target = setup, args=(client,client_name,))
         thread.start()
 
 
