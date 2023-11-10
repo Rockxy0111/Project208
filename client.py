@@ -20,15 +20,10 @@ BUFFER_SIZE = 4096
 
 name=None
 listbox=None
-filePathLabel=None
 
-global song_counter
-song_counter=0
 
 
 def musicWindow(): 
-    global song_counter
-    global filePathLabel
     global listbox
     global infoLabel
     
